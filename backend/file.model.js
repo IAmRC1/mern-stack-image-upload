@@ -6,6 +6,10 @@ const fileSchema = new mongoose.Schema({
     contentType: String 
   },
   imageName: String
-},{ timestamps: true });
+},
+  { timestamps: true }
+);
 
-mongoose.model("file", fileSchema);
+const File = mongoose.model("file", fileSchema);
+
+module.exports = File;
